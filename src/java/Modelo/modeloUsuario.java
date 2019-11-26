@@ -31,17 +31,22 @@ public class modeloUsuario {
         sesion.close();
     }
 
-    static public Usuario logIn(String idusuario) {
-
-        Usuario user = null;
+    static public boolean logIn(String user, String clave) {
+        boolean band = false;
+        Usuario usuario = null;
+        String contra = null;
         try {
             iniciaOperacion();
-            user = (Usuario) sesion.get(Usuario.class, idusuario);
+            usuario = (Usuario) sesion.get(Usuario.class, user);
+            contra = usuario.getContraseña();
+            if (clave.equals(contra)) {
+                band = true;
+            }
             terminaOperacion();
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Error: " + e);
         }
-        return user;
+        return band;
 
     }
 
@@ -70,4 +75,15 @@ public class modeloUsuario {
         return id;
     }
 
+    static public Usuario buscarUsuario(String idUsuario) {
+        Usuario usuario = null;
+        try {
+            iniciaOperacion();
+            usuario = (Usuario) sesion.get(Usuario.class, idUsuario);
+            terminaOperacion();
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Error: " + e);
+        }
+        return usuario;
+    }
 }

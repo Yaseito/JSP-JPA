@@ -31,7 +31,7 @@ public class controladorEstados {
         return listaEstados;
     }
 
-    public Estados buscaEstados(int idEstados) {
+    public Estados buscaEstados(String idEstados) {
         Estados estado = null;
         estado = modeloEstados.buscarEstados(idEstados);
         return estado;

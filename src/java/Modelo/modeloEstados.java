@@ -41,7 +41,7 @@ public class modeloEstados {
         return id;
     }
 
-    static public Estados buscarEstados(int idEstados) {
+    static public Estados buscarEstados(String idEstados) {
         Estados estado = null;
         try {
             iniciaOperacion();

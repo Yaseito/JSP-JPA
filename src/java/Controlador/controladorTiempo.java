@@ -18,11 +18,11 @@ import java.util.List;
  */
 public class controladorTiempo {
 
-    public void guardaTiempo(int id, Ciudad idciudad, int tem_max, int tem_min, Estados estado, TiempoId tiempoid) {
+    public void guardaTiempo(int id, Ciudad ciudad, int tem_max, int tem_min, Estados estado, TiempoId tiempoid) {
 
         Tiempo tiempo = new Tiempo();
         tiempo.setIdTiempo(id);
-        tiempo.setCiudad(idciudad);
+        tiempo.setCiudad(ciudad);
         tiempo.setTempMax(tem_max);
         tiempo.setTempMin(tem_min);
         tiempo.setEstados(estado);
