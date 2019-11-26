@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 25/11/2019 10:24:28 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Modelo.Entidades.Tiempo" table="tiempo" catalog="proyectousuario" optimistic-lock="version">
+        <composite-id name="id" class="Modelo.Entidades.TiempoId">
+            <key-property name="idCiudad" type="int">
+                <column name="id_ciudad" />
+            </key-property>
+            <key-property name="fecha" type="date">
+                <column name="fecha" length="10" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="ciudad" class="Modelo.Entidades.Ciudad" update="false" insert="false" fetch="select">
+            <column name="id_ciudad" not-null="true" />
+        </many-to-one>
+        <many-to-one name="estados" class="Modelo.Entidades.Estados" fetch="select">
+            <column name="estado" />
+        </many-to-one>
+        <property name="idTiempo" type="int">
+            <column name="id_tiempo" not-null="true" />
+        </property>
+        <property name="tempMax" type="java.lang.Integer">
+            <column name="temp_max" />
+        </property>
+        <property name="tempMin" type="java.lang.Integer">
+            <column name="temp_min" />
+        </property>
+    </class>
+</hibernate-mapping>
