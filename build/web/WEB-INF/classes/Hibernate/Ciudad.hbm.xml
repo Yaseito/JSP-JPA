@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 25/11/2019 10:24:28 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Modelo.Entidades.Ciudad" table="ciudad" catalog="proyectousuario" optimistic-lock="version">
+        <id name="idCiudad" type="int">
+            <column name="id_ciudad" />
+            <generator class="assigned" />
+        </id>
+        <property name="nombreCiudad" type="string">
+            <column name="nombre_ciudad" />
+        </property>
+        <set name="tiempos" table="tiempo" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="id_ciudad" not-null="true" />
+            </key>
+            <one-to-many class="Modelo.Entidades.Tiempo" />
+        </set>
+    </class>
+</hibernate-mapping>
