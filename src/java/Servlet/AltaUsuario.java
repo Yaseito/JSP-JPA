@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author User
  */
-public class Inicio extends HttpServlet {
+public class AltaUsuario extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -32,17 +32,17 @@ public class Inicio extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
+        
         String usuario = request.getParameter("usuario");
-        String contraseña = request.getParameter("pass");
-
+        String pass = request.getParameter("pass");
+        String pass2 = request.getParameter("pass2");
+        
         controladorUsuario cu = new controladorUsuario();
-
-        if (cu.logIn(usuario, contraseña)) {
-            response.sendRedirect("Admin.jsp");
-        } else {
+        if(cu.guardaUsuario(usuario, pass, pass2)){
             response.sendRedirect("index.jsp");
+        }else{
+            response.sendRedirect("AltaUsuario.jsp");
         }
-
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

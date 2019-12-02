@@ -5,7 +5,7 @@
  */
 package Servlet;
 
-import Controlador.controladorUsuario;
+import Controlador.controladorTiempo;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author User
  */
-public class Inicio extends HttpServlet {
+public class AltaTiempo extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -32,17 +32,24 @@ public class Inicio extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
-        String usuario = request.getParameter("usuario");
-        String contraseña = request.getParameter("pass");
-
-        controladorUsuario cu = new controladorUsuario();
-
-        if (cu.logIn(usuario, contraseña)) {
-            response.sendRedirect("Admin.jsp");
-        } else {
+        
+        String idtiempo = request.getParameter("idtiempo");
+        int idt = Integer.parseInt(idtiempo);
+        String ciudad = request.getParameter("idciudad");        
+        String inicio = request.getParameter("inicio");
+        String fin = request.getParameter("fin");
+        String tempmax = request.getParameter("tempmax");
+        int max = Integer.parseInt(tempmax);
+        String tempmin = request.getParameter("tempmin");
+        int min = Integer.parseInt(tempmin);
+        String estado = request.getParameter("estado");
+        
+        controladorTiempo ct = new controladorTiempo();
+        if(ct.guardaTiempo(idt, ciudad, max , min, estado, fin) && ct.guardaTiempo(idt, ciudad, max , min, estado, inicio)){
             response.sendRedirect("index.jsp");
+        }else{
+            response.sendRedirect("AltaUsuario.jsp");
         }
-
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

@@ -4,7 +4,7 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
 
-public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
+public final class Admin_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
 
   private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
@@ -51,13 +51,14 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <title>JSP Page</title>\n");
       out.write("    </head>\n");
       out.write("    <body>\n");
-      out.write("        <h1>Hello World!</h1>\n");
-      out.write("        <input type=\"button\" onClick=\"window.location='AltaUsuario.jsp'\" value=\"Registrarme\" /><br>\n");
-      out.write("        <label>Nombre</label>\n");
-      out.write("        <input type=\"text\" name=\"usuario\"/><br>\n");
-      out.write("        <label>Contraseña</label>\n");
-      out.write("        <input type=\"password\" name=\"pass\"/><br>\n");
-      out.write("        <input type=\"submit\" value=\"Login\"/><br>\n");
+      out.write("        <h1>ADMIN</h1>\n");
+      out.write("        <form action=\"nuevaciudad\" method=\"post\">\n");
+      out.write("        <label>idCiudad</label>\n");
+      out.write("        <input type=\"text\" name=\"idciudad\"/><br>\n");
+      out.write("        <label>Ciudad</label>\n");
+      out.write("        <input type=\"text\" name=\"ciudad\"/><br>\n");
+      out.write("        <input type=\"submit\" value=\"Alta\"/><br>\n");
+      out.write("        </form>\n");
       out.write("        <hr>\n");
       out.write("        <label>Ciudad</label>\n");
       out.write("        <select name=\"ciudad\">\n");
@@ -67,23 +68,6 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        </select><br>\n");
       out.write("        <label>Fecha</label>\n");
       out.write("        <input type=\"date\" name=\"fecha\"/><br>\n");
-      out.write("        <table>\n");
-      out.write("            <tr>\n");
-      out.write("                <td rowspan=\"2\">\n");
-      out.write("                    <img src=\"estrella-svg.svg\" alt=\"Estrella SVG\">\n");
-      out.write("\n");
-      out.write("                </td>\n");
-      out.write("                <td colspan=\"2\">Ciudad</td>\n");
-      out.write("                <td colspan=\"2\">Fecha</td>\n");
-      out.write("            </tr>\n");
-      out.write("            <tr>\n");
-      out.write("                <td>Temp_min</td>\n");
-      out.write("                <td>20</td>\n");
-      out.write("                <td>Temp_max</td>\n");
-      out.write("                <td>30</td>\n");
-      out.write("            </tr>\n");
-      out.write("        </table>\n");
-      out.write("\n");
       out.write("    </body>\n");
       out.write("</html>\n");
     } catch (Throwable t) {

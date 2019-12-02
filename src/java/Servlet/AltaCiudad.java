@@ -5,7 +5,7 @@
  */
 package Servlet;
 
-import Controlador.controladorUsuario;
+import Controlador.controladorCiudad;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author User
  */
-public class Inicio extends HttpServlet {
+public class AltaCiudad extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -32,17 +32,17 @@ public class Inicio extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
-        String usuario = request.getParameter("usuario");
-        String contraseña = request.getParameter("pass");
-
-        controladorUsuario cu = new controladorUsuario();
-
-        if (cu.logIn(usuario, contraseña)) {
-            response.sendRedirect("Admin.jsp");
-        } else {
+        
+        String idciudad = request.getParameter("idciudad");
+        int id = Integer.parseInt(idciudad);
+        String ciudad = request.getParameter("ciudad");
+        
+        controladorCiudad cu = new controladorCiudad();
+        if(cu.guardaCiudad(id, ciudad)){
             response.sendRedirect("index.jsp");
+        }else{
+            response.sendRedirect("AltaUsuario.jsp");
         }
-
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

@@ -13,13 +13,13 @@
     </head>
     <body>
         <h1>Formulario de registro</h1>
-        <form action="" method="post">
+        <form action="nuevousuario" method="post">
             <label>Nombre</label>
             <input type="text" name="usuario"/><br>
             <label>Contraseña</label>
-            <input type="text" name="contraseña"/><br>
+            <input type="text" name="pass"/><br>
             <label>Contraseña</label>
-            <input type="text" name="contraseña2"/><br>
+            <input type="text" name="pass2"/><br>
             <input type="submit" value="Registrarme"/>
         </form>
     </body>

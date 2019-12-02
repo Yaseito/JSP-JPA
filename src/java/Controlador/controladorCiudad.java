@@ -8,6 +8,7 @@ package Controlador;
 import Modelo.Entidades.Ciudad;
 import Modelo.modeloCiudad;
 import java.util.List;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -15,12 +16,18 @@ import java.util.List;
  */
 public class controladorCiudad {
 
-    public void guardaCiudad(int id, String nombre) {
-
+    public boolean guardaCiudad(int id, String nombre) {
+        boolean band = false;
+        if(id > 0){
         Ciudad ciudad = new Ciudad();
         ciudad.setNombreCiudad(nombre);
         ciudad.setIdCiudad(id);
         modeloCiudad.guardaCiudad(ciudad);
+            band=true;
+        }else{
+            JOptionPane.showMessageDialog(null, "Error en guardar");
+        };
+        return band;
     }
 
     public List<Ciudad> listaCiudad() {

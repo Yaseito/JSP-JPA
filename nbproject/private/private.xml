@@ -3,20 +3,21 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/xampp/htdocs/Usuario/web/Admin.jsp</file>
             <file>file:/C:/xampp/htdocs/Usuario/src/java/Conexion/main.java</file>
             <file>file:/C:/xampp/htdocs/Usuario/src/java/Modelo/modeloUsuario.java</file>
             <file>file:/C:/xampp/htdocs/Usuario/src/java/Modelo/Entidades/TiempoId.java</file>
             <file>file:/C:/xampp/htdocs/Usuario/src/java/Modelo/modeloEstados.java</file>
             <file>file:/C:/xampp/htdocs/Usuario/web/index.jsp</file>
+            <file>file:/C:/xampp/htdocs/Usuario/src/java/Servlet/Inicio.java</file>
             <file>file:/C:/xampp/htdocs/Usuario/src/java/Modelo/Entidades/Usuario.java</file>
-            <file>file:/C:/xampp/htdocs/Usuario/web/WEB-INF/Usuario.jsp</file>
             <file>file:/C:/xampp/htdocs/Usuario/src/java/Hibernate/hibernate.reveng.xml</file>
             <file>file:/C:/xampp/htdocs/Usuario/src/java/Modelo/modeloTiempo.java</file>
             <file>file:/C:/xampp/htdocs/Usuario/src/java/Controlador/controladorTiempo.java</file>
-            <file>file:/C:/xampp/htdocs/Usuario/web/WEB-INF/Admin.jsp</file>
             <file>file:/C:/xampp/htdocs/Usuario/web/META-INF/context.xml</file>
             <file>file:/C:/xampp/htdocs/Usuario/src/java/Modelo/modeloCiudad.java</file>
             <file>file:/C:/xampp/htdocs/Usuario/src/java/Modelo/modeloTiempoId.java</file>
+            <file>file:/C:/xampp/htdocs/Usuario/web/AltaUsuario.jsp</file>
             <file>file:/C:/xampp/htdocs/Usuario/src/java/Controlador/controladorEstados.java</file>
             <file>file:/C:/xampp/htdocs/Usuario/src/java/Modelo/Entidades/Ciudad.java</file>
             <file>file:/C:/xampp/htdocs/Usuario/src/java/Controlador/controladorUsuario.java</file>
@@ -24,9 +25,9 @@
             <file>file:/C:/xampp/htdocs/Usuario/src/java/Controlador/controladorTiempoId.java</file>
             <file>file:/C:/xampp/htdocs/Usuario/src/java/hibernate.cfg.xml</file>
             <file>file:/C:/xampp/htdocs/Usuario/src/java/Controlador/Controlador.java</file>
+            <file>file:/C:/xampp/htdocs/Usuario/web/WEB-INF/web.xml</file>
             <file>file:/C:/xampp/htdocs/Usuario/src/java/Controlador/controladorCiudad.java</file>
             <file>file:/C:/xampp/htdocs/Usuario/src/java/Modelo/Entidades/Tiempo.java</file>
-            <file>file:/C:/xampp/htdocs/Usuario/web/WEB-INF/AltaUsuario.jsp</file>
             <file>file:/C:/xampp/htdocs/Usuario/src/java/Modelo/Modelo.java</file>
         </group>
     </open-files>

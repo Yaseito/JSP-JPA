@@ -4,9 +4,33 @@
         <servlet-name>Inicio</servlet-name>
         <servlet-class>Servlet.Inicio</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AltaUsuario</servlet-name>
+        <servlet-class>Servlet.AltaUsuario</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AltaCiudad</servlet-name>
+        <servlet-class>Servlet.AltaCiudad</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AltaTiempo</servlet-name>
+        <servlet-class>Servlet.AltaTiempo</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Inicio</servlet-name>
         <url-pattern>/iniciar</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AltaUsuario</servlet-name>
+        <url-pattern>/nuevousuario</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AltaCiudad</servlet-name>
+        <url-pattern>/nuevaciudad</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AltaTiempo</servlet-name>
+        <url-pattern>/nuevoTiempo</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

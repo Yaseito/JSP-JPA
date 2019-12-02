@@ -14,11 +14,13 @@
     <body>
         <h1>Hello World!</h1>
         <input type="button" onClick="window.location='AltaUsuario.jsp'" value="Registrarme" /><br>
+        <form action="iniciar" method="post">
         <label>Nombre</label>
         <input type="text" name="usuario"/><br>
         <label>Contraseña</label>
         <input type="password" name="pass"/><br>
         <input type="submit" value="Login"/><br>
+        </form>
         <hr>
         <label>Ciudad</label>
         <select name="ciudad">
